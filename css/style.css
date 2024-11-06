@@ -31,7 +31,7 @@ body {
     font-size: 56px;
     padding: 2%;
     height: 15%;
-    background-color: #4a4747;
+    background-color: #434040;
 }
 
 #calculator #work-table {
@@ -47,8 +47,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #555555;
-    font-size: 1.5rem;
+    background-color: #646363;
+    font-size: 2.5rem;
+    font-weight: 700;
     border-radius: 80px;
     cursor: pointer;
+}
+
+#calculator .operation-button {
+    background-color: #f6b53d;
 }
