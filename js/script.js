@@ -3,11 +3,16 @@ const errorMessage = "Error!"
 
 const initialCharLimit = 12;
 const maxFontSize = 3.5;
+const minFontSize = 2;
 
 let charLimit = initialCharLimit;
 
+function setFontSize (fontSize) {
+    if (fontSize <= maxFontSize && fontSize >= minFontSize)
+        display.style.fontSize = `${fontSize}rem`;
+}
+
 function adjustFontSize () {
-    const minFontSize = 2;
     const fontSizeDecrement = 0.5;
 
     const currentLength = display.innerText.length;
@@ -16,14 +21,15 @@ function adjustFontSize () {
 
     if (currentLength > charLimit && currentFontSize > minFontSize) {
         currentFontSize -= fontSizeDecrement;
-        display.style.fontSize = `${currentFontSize}rem`;
+        setFontSize (currentFontSize);
         
         charLimit += charLimit / 4;
     } 
     
     else if (currentLength < initialCharLimit && currentFontSize < maxFontSize) {
         currentFontSize = maxFontSize;
-        display.style.fontSize = `${currentFontSize}rem`;
+        setFontSize (currentFontSize);
+
         charLimit = initialCharLimit;
     }
 }
@@ -47,5 +53,5 @@ function calculateInput () {
 
 function clearDisplay () {
     display.innerText = "";
-    display.style.fontSize = `${maxFontSize}rem`;   
+    setFontSize (maxFontSize);
 }
