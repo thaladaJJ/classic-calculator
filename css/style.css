@@ -28,7 +28,8 @@ body {
     flex-direction: column;
     border-radius: 15px;
     color: #FFFFFF;
-    font-family: Arial
+    font-family: Arial;
+    overflow: hidden;
 }
 
 #calculator #display {

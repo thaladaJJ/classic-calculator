@@ -12,31 +12,31 @@
 
     <div id="calculator"> 
         
-        <div id="display"> <p> </p> </div>
+        <div id="display"> </div>
 
         <div id="work-table"> 
-            <div class="button operation-button"> <p> + </p> </div>
-            <div class="button"> <p> 7 </p> </div>
-            <div class="button"> <p> 8 </p> </div>
-            <div class="button"> <p> 9 </p></div>
+            <div onclick="appendToDisplay('+')" class="button operation-button"> + </div>
+            <div onclick="appendToDisplay('7')" class="button"> 7 </div>
+            <div onclick="appendToDisplay('8')" class="button"> 8 </div>
+            <div onclick="appendToDisplay('9')" class="button"> 9 </div>
 
-            <div class="button operation-button"> <p> - </p> </div>
-            <div class="button"> <p> 4 </p> </div>
-            <div class="button"> <p> 5 </p> </div>
-            <div class="button"> <p> 6 </p> </div>
+            <div onclick="appendToDisplay('-')" class="button operation-button"> - </div>
+            <div onclick="appendToDisplay('4')" class="button"> 4 </div>
+            <div onclick="appendToDisplay('5')" class="button"> 5 </div>
+            <div onclick="appendToDisplay('6')" class="button"> 6 </div>
 
-            <div class="button operation-button"> <p> * </p> </div>
-            <div class="button"> <p> 1 </p> </div>
-            <div class="button"> <p> 2 </p> </div>
-            <div class="button"> <p> 3 </p> </div>
+            <div onclick="appendToDisplay('*')" class="button operation-button"> * </div>
+            <div onclick="appendToDisplay('1')" class="button"> 1 </div>
+            <div onclick="appendToDisplay('2')" class="button"> 2 </div>
+            <div onclick="appendToDisplay('3')" class="button"> 3 </div>
 
             
-            <div class="button operation-button"> <p> / </p> </div>
-            <div class="button"> <p> 0 </p> </div>
-            <div class="button"> <p> . </p> </div>
-            <div class="button"> <p> = </p> </div>
+            <div onclick="appendToDisplay('/')" class="button operation-button"> / </div>
+            <div onclick="appendToDisplay('0')" class="button"> 0 </div>
+            <div onclick="appendToDisplay('.')" class="button"> . </div>
+            <div onclick="calculateInput()"     class="button"> = </div>
 
-            <div class="button operation-button"> <p> C </p> </div>
+            <div onclick="clearDisplay()" class="button operation-button"> C </div>
         </div>
     </div>
         

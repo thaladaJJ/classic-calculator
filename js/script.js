@@ -1,11 +1,21 @@
-const display = document.getElementById('display')
+const display = document.getElementById("display")
+const errorMessage = "Error!"
 
-const buttons = document.querySelectorAll('.button')
+function appendToDisplay (input) {
+    if (display.innerText === errorMessage)
+        clearDisplay ();
 
-function buttonInput (event) {
-    const buttonText = event.target.innerText;
-    display.innerText += buttonText;
+    display.innerText += input;
 }
 
-buttons.forEach (button => {button.addEventListener('click', buttonInput)}
-                );
+function calculateInput () {
+    try {
+        display.innerText = eval (display.innerText);
+    } catch (error) {
+        display.innerText = errorMessage;
+    }
+}
+
+function clearDisplay () {
+    display.innerText = "";
+}
